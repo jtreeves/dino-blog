@@ -1,37 +1,17 @@
 import './App.css'
-// import Dino from './Dino'
 import React, { Component } from 'react'
+import Dino from './Dino'
 
 class App extends Component {
-    constructor(props) {
-        super()
-        this.state = {
-            title: props.post.title,
-            author: props.post.author,
-            body: props.post.body,
-            comments: props.post.comments,
-        }
-    }
-
-    newComment = () => {
-        let newComments = [...this.state.comments, this.state.inputText]
-        this.setState({ comments: newComments })
-    }
-
-    changeInput = (event) => {
-        this.setState({ inputText: event.target.value })
-    }
-    
-    render() {
+    render(props) {
         return (
-            <div>
-                <h1>{this.state.title}</h1>
-                <p>by {this.state.author}</p>
-                <p>{this.state.body}</p>
-                <h2>Comments:</h2>
-                <p>{this.state.comments}</p>
-                <input type='text' value={this.state.inputText} onChange={this.changeInput} />
-                <button onClick={this.newComment}>Add Comment</button>
+            <div className="App">
+                <Dino
+                    title={this.props.post.title}
+                    author={this.props.post.author}
+                    body={this.props.post.body}
+                    comments={this.props.post.comments}
+                />
             </div>
         )
     }
