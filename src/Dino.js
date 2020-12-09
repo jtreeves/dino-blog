@@ -29,7 +29,11 @@ class Dino extends Component {
                 <p>{this.state.body}</p>
                 <h2>Comments:</h2>
                 <p>{this.state.comments}</p>
-                <input type='text' value={this.state.inputText} onChange={this.changeInput} />
+                <input
+                    type='text'
+                    value={this.state.inputText}
+                    onChange={this.changeInput}
+                />
                 <button onClick={this.newComment}>Add Comment</button>
             </div>
         )
