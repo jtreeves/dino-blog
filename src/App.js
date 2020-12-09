@@ -10,7 +10,6 @@ class App extends Component {
             author: props.post.author,
             body: props.post.body,
             comments: props.post.comments,
-            // inputText: ''
         }
     }
 
