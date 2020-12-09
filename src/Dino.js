@@ -4,11 +4,7 @@ class Dino extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            title: props.title,
-            author: props.author,
-            body: props.body,
-            comments: props.comments,
-            inputText: ''
+            comments: props.comments
         }
     }
 
@@ -24,9 +20,9 @@ class Dino extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
-                <p>by {this.state.author}</p>
-                <p>{this.state.body}</p>
+                <h1>{this.props.title}</h1>
+                <p>by {this.props.author}</p>
+                <p>{this.props.body}</p>
                 <h2>Comments:</h2>
                 <p>{this.state.comments}</p>
                 <input
