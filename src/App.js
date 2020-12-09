@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Dino from './Dino'
 
 class App extends Component {
-    render(props) {
+    render() {
         return (
             <div className="App">
                 <Dino
